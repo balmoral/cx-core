@@ -35,4 +35,22 @@ class Date
   def day_of_week
     wday
   end
+
+  def next_monday_if_weekend
+    case wday
+      when 0 then self + 1
+      when 6 then self + 2
+    else
+      self
+    end
+  end
+
+  def prev_friday_if_weekend
+    case wday
+      when 0 then self - 2
+      when 6 then self - 1
+    else
+      self
+    end
+  end
 end

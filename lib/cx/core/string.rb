@@ -81,4 +81,10 @@ class String
     self
   end
 
+  # Returns a string with commas added
+  # every 3 chars
+  def comma_numeric
+    reverse.gsub(/...(?=.)/,'\&,').reverse
+  end
+
 end # String
