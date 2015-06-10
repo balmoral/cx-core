@@ -47,31 +47,36 @@ module TimeFormat
     strftime(_fmt 'HMSL', sep)
   end
 
-  def ymdhm(century: false, date_sep: nil, time_sep: nil)
-    gap = date_sep || time_sep ? ' ' : ''
-    "#{ymd century: century, sep: date_sep}#{gap}#{hm sep: time_sep}"
+  def ymdhm(century: true, date_sep: nil, time_sep: nil, space: nil)
+    "#{ymd century: century, sep: date_sep}#{space}#{hm sep: time_sep}"
   end
 
-  def yyyymmddhhmm(date_sep: nil, time_sep: nil)
-    ymdhm(century: true, date_sep: date_sep, time_sep: time_sep)
+  def yymmddhhmm(date_sep: nil, time_sep: nil, space: nil)
+    ymdhm(century: false, date_sep: date_sep, time_sep: time_sep, space: space)
   end
 
-  def ymdhms(century: false, date_sep: nil, time_sep: nil)
-    gap = date_sep || time_sep ? ' ' : ''
-    "#{ymd century: century, sep: date_sep}#{gap}#{hms sep: time_sep}"
+  def yyyymmddhhmm(date_sep: nil, time_sep: nil, space: nil)
+    ymdhm(century: true, date_sep: date_sep, time_sep: time_sep, space: space)
   end
 
-  def yyyymmddhhmmss(date_sep: nil, time_sep: nil)
-    ymdhms(century: true, date_sep: date_sep, time_sep: time_sep)
+  def ymdhms(century: true, date_sep: nil, time_sep: nil, space: nil)
+    "#{ymd century: century, sep: date_sep}#{space}#{hms sep: time_sep}"
   end
 
-  def ymdhmsl(century: false, date_sep: nil, time_sep: nil)
-    gap = date_sep || time_sep ? ' ' : ''
-    "#{ymd century: century, sep: date_sep}#{gap}#{hmsl sep: time_sep}"
+  def yymmddhhmmss(date_sep: nil, time_sep: nil, space: nil)
+    ymdhms(century: false, date_sep: date_sep, time_sep: time_sep, space: space)
   end
 
-  def yyyymmddhhmmssll(date_sep: nil, time_sep: nil)
-      ymdhmsl(century: true, date_sep: date_sep, time_sep: time_sep)
+  def yyyymmddhhmmss(date_sep: nil, time_sep: nil, space: nil)
+    ymdhms(century: true, date_sep: date_sep, time_sep: time_sep, space: space)
+  end
+
+  def ymdhmsl(century: false, date_sep: nil, time_sep: nil, space: nil)
+    "#{ymd century: century, sep: date_sep}#{space}#{hmsl sep: time_sep}"
+  end
+
+  def yyyymmddhhmmssll(date_sep: nil, time_sep: nil, space: nil)
+      ymdhmsl(century: true, date_sep: date_sep, time_sep: time_sep, space: space)
   end
 
   def minute_of_day

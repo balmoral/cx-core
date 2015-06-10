@@ -45,9 +45,9 @@ class Object
      }
    end
 
-   def to_csv
-     String.csv(to_a)
-   end
+  def to_csv
+    map(&:to_s).join(',')
+  end
 
    def to_strs
      collect { |e| e.to_s }
@@ -81,7 +81,5 @@ class Object
      each { |e| return true if yield(e) }
      false
    end
-
-
 
 end

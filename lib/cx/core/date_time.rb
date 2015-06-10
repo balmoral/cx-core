@@ -25,3 +25,9 @@ class DateTime
   end
 
 end
+
+class String
+  def to_datetime
+    DateTime.parse(self)
+  end
+end

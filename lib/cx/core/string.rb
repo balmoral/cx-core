@@ -60,27 +60,6 @@ class String
     gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2').gsub(/([a-z\d])([A-Z])/, '\1_\2').downcase
   end
 
-  # Returns self with comma separated values got from args.
-  # A separator other than comma can be specified.
-  # Args should be enumerable.
-  # If one or all of args is enumerable
-  # then recursively call csv for that arg and
-  # put newline after each arg
-  # If no args enumerable then no newlines.
-  def csv(args, sep = ',')
-    c = 0
-    new_lines = args.reduce(false) do |truth, arg|
-      truth || arg.is_a?(Enumerable)
-    end
-    args.each do |arg|
-      self << sep if sep && c > 0
-      self << (arg.is_a?(Enumerable) ? csv(arg) : arg.to_s)
-      self.nl if new_lines
-      c += 1
-    end
-    self
-  end
-
   # Returns a string with commas added
   # every 3 chars
   def comma_numeric
