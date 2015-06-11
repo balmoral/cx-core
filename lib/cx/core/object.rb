@@ -3,7 +3,7 @@ class Object
   # Destroy contents of object by setting all instance variables to nil.
   # Purpose is to assist garbage collection be breaking references
   # (especially circular ones).
-  def destroy
+  def ___destroy___
     instance_variables.each { |v| instance_variable_set(v, nil) }
   end
 
