@@ -23,6 +23,12 @@ class Array
     sort_find_index(target) != nil
   end
 
+  def reverse_each_with_index
+    (size - 1).downto(0) do |i|
+      yield self[i], i
+    end
+  end
+
   protected
 
   # assumes array is sorted
