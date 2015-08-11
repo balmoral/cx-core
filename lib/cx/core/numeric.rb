@@ -63,4 +63,11 @@ class Numeric
     d % 6
   end
 
+  # string format
+
+  def fmt(width = 0, prec = 0, comma: true)
+    s = "%#{width}.#{prec}f" % self
+    comma ? s.comma_numeric : s
+  end
+
 end

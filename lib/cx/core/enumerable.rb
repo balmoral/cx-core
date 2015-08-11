@@ -31,19 +31,21 @@ class Object
      c == 0 ? nil : s.to_f / c.to_f
    end
 
-   def min(&block)
-     inject(Float::INFINITY) { |memo, e|
-       v = block ? block.call(e) : e
-       v ? memo.min(v) : memo
-     }
-   end
+   # now defined in ruby core
+   # def min(&block)
+   #  inject(Float::INFINITY) { |memo, e|
+   #    v = block ? block.call(e) : e
+   #    v ? memo.min(v) : memo
+   #  }
+   # end
 
-   def max(&block)
-     inject(Float::INFINITY.negate) { |memo, e|
-       v = block ? block.call(e) : e
-       v ? memo.max(v) : memo
-     }
-   end
+   # now defined in ruby core
+   # def max(&block)
+   #  inject(Float::INFINITY.negate) { |memo, e|
+   #    v = block ? block.call(e) : e
+   #    v ? memo.max(v) : memo
+   #  }
+   # end
 
   def to_csv
     map(&:to_s).join(',')

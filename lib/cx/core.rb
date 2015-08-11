@@ -1,3 +1,4 @@
+require 'cx/core/constants'
 require 'cx/core/array'
 require 'cx/core/class'
 require 'cx/core/comparable'

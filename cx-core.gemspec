@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
                       lib/cx/core/array.rb
                       lib/cx/core/class.rb
                       lib/cx/core/comparable.rb
+                      lib/cx/core/constants.rb
                       lib/cx/core/date.rb
                       lib/cx/core/date_time.rb
                       lib/cx/core/enumerable.rb

@@ -9,5 +9,13 @@ class Hash
     end
     result
   end
+
+  # Returns new instance with keys converted to symbols.
+  def symbolize
+    convert do|k, v|
+      [k.to_sym, v]
+    end
+  end
+
 end
 

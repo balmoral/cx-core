@@ -1,0 +1,15 @@
+COMMA         = ','
+TAB           = "\t"
+NL            = "\n"
+EOL           = "\n"
+CR            = "\r"
+LF            = "\n"
+DOT           = '.'
+PIPE          = '|'
+SLASH         = '/'
+SLOSH         = '\\'
+CARET         = '^'
+TILDE         = '~'
+AT            = '@'
+QUOTE_SINGLE  = "'"
+QUOTE_DOUBLE  = '"'

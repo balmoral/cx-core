@@ -29,6 +29,18 @@ class Array
     end
   end
 
+  def each_except_first
+    (1...size).each do |i|
+      yield self[i]
+    end
+  end
+
+  def each_except_first_with_index
+    (1...size).each do |i|
+      yield self[i], i
+    end
+  end
+
   protected
 
   # assumes array is sorted
