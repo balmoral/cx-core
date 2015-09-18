@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'cx/core/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'cx-util'
+  spec.name          = 'cx-core'
   spec.version       = CX::Core::VERSION
   spec.date          = '2015-04-24'
   spec.summary       = 'CX extensions to core class'
