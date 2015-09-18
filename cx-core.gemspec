@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
                       lib/cx/core/date.rb
                       lib/cx/core/date_time.rb
                       lib/cx/core/enumerable.rb
+                      lib/cx/core/error.rb
                       lib/cx/core/hash.rb
                       lib/cx/core/integer.rb
                       lib/cx/core/numeric.rb
@@ -23,6 +24,7 @@ Gem::Specification.new do |s|
                       lib/cx/core/symbol.rb
                       lib/cx/core/time.rb
                       lib/cx/core/time_format.rb
+                      lib/cx/core/time_of_day.rb
                     )
   s.homepage      = 'http://rubygems.org/gems/cx-core' # TODO: push to rubygems ??
   s.license       = 'MIT'
