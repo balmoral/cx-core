@@ -14,5 +14,6 @@ class Time
   def day_of_week
     to_date.wday
   end
+
 end
 
