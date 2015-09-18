@@ -1,34 +1,20 @@
-Gem::Specification.new do |s|
-  s.name          = 'cx-core'
-  s.version       = '1.0.0'
-  s.date          = '2015-04-24'
-  s.summary       = 'CX extensions to core classes'
-  s.authors       = ['CG']
-  s.email         = 'cojogu@gmail.com'
-  s.require_paths = %w(lib)
-  s.files         = %w(
-                      lib/cx/core.rb
-                      lib/cx/core/array.rb
-                      lib/cx/core/class.rb
-                      lib/cx/core/comparable.rb
-                      lib/cx/core/constants.rb
-                      lib/cx/core/date.rb
-                      lib/cx/core/date_time.rb
-                      lib/cx/core/enumerable.rb
-                      lib/cx/core/error.rb
-                      lib/cx/core/hash.rb
-                      lib/cx/core/integer.rb
-                      lib/cx/core/numeric.rb
-                      lib/cx/core/object.rb
-                      lib/cx/core/string.rb
-                      lib/cx/core/symbol.rb
-                      lib/cx/core/time.rb
-                      lib/cx/core/time_format.rb
-                      lib/cx/core/time_of_day.rb
-                    )
-  s.homepage      = 'http://rubygems.org/gems/cx-core' # TODO: push to rubygems ??
-  s.license       = 'MIT'
+# coding: utf-8
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'cx/core/version'
+
+Gem::Specification.new do |spec|
+  spec.name          = 'cx-util'
+  spec.version       = CX::Core::VERSION
+  spec.date          = '2015-04-24'
+  spec.summary       = 'CX extensions to core class'
+  spec.authors       = ['Colin Gunn']
+  spec.email         = 'colgunn@icloud.com'
+  spec.homepage      = 'http://rubygemspec.org/gems/cx-core' # TODO: push to rubygems ??
+  spec.license       = 'MIT'
+
+  spec.files         = `git ls-files -z`.split("\x0")
+  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.require_paths = ['lib']
 end
-
-
-
