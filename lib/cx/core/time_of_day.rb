@@ -8,6 +8,11 @@ class TimeOfDay
     [h, m, s]
   end
 
+  # Returns the second of the day.
+  # Arg may be a Time or DateTime or anything
+  # which responds to :hour, :min and :sec.
+  # Or args may be hour, min_of_hour, sec_of_min
+  # with min and sec being optional.
   def self.second(*args)
     if args[0].respond_to?(:hour) # Time or DateTime
       h = args[0].hour
