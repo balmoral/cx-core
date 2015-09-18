@@ -8,7 +8,7 @@ class TimeOfDay
     [h, m, s]
   end
 
-  def second(*args)
+  def self.second(*args)
     if args[0].respond_to?(:hour) # Time or DateTime
       h = args[0].hour
       m = args[0].min

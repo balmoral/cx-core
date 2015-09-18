@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="51dba32c-ac54-4cb6-9256-c8a235961510" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cx-core-1.0.0.gem" afterPath="$PROJECT_DIR$/cx-core-1.0.0.gem" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/cx/core.rb" afterPath="$PROJECT_DIR$/lib/cx/core.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/cx/core/time_of_day.rb" afterPath="$PROJECT_DIR$/lib/cx/core/time_of_day.rb" />
     </list>
     <ignored path="cx-core.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="core.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="core.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/cx/core.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27939466">
+            <state vertical-scroll-proportion="0.0">
               <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
               <folding />
             </state>
@@ -115,11 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="time_of_day.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="time_of_day.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/cx/core/time_of_day.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.17462166">
+              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -155,8 +155,8 @@
         <option value="$PROJECT_DIR$/lib/cx/core/error.rb" />
         <option value="$PROJECT_DIR$/lib/cx/core/time.rb" />
         <option value="$PROJECT_DIR$/cx-core.gemspec" />
-        <option value="$PROJECT_DIR$/lib/cx/core/time_of_day.rb" />
         <option value="$PROJECT_DIR$/lib/cx/core.rb" />
+        <option value="$PROJECT_DIR$/lib/cx/core/time_of_day.rb" />
       </list>
     </option>
   </component>
@@ -827,18 +827,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/cx/core/time_of_day.rb">
+    <entry file="file://$PROJECT_DIR$/lib/cx/core.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/cx/core.rb">
+    <entry file="file://$PROJECT_DIR$/lib/cx/core/time_of_day.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27939466">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.17462166">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
           <folding />
         </state>
       </provider>
