@@ -108,7 +108,7 @@
         <entry file="file://$PROJECT_DIR$/tasks/push">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.034802783">
-              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -814,7 +814,7 @@
     <entry file="file://$PROJECT_DIR$/tasks/push">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.034802783">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
           <folding />
         </state>
       </provider>
