@@ -73,4 +73,8 @@ class String
     end
   end
 
+  def strip_trailing_zeros
+    strip.sub(/(\.0*[1-9]*)0*$/, '\1').sub(/\.$/,'').sub(/\.0*$/,'')
+  end
+
 end # String

@@ -1,4 +1,6 @@
 class Numeric
+
+
   def percent
     self * 100
   end
