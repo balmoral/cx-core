@@ -41,6 +41,16 @@ class String
 
   alias_method :camelize, :camel_case
 
+
+  # Takes a camel case string (like a class name)
+  # and inserts spaces before the caps, except for
+  # the first, or when caps a sequential.
+  # e.g. 'AbcDefGhi' => 'Abc Def Ghi'
+  # e.g. 'AbcABC' => 'Abc ABC'
+  def camel_case_to_words
+    gsub(/([A-Z]+)([A-Z][a-z])/, '\1 \2').gsub(/([a-z\d])([A-Z])/, '\1 \2').upcase
+  end
+
   # Returns string 'john_smith' as 'John Smith'
   def underscore_to_upcase
     downcase.sub(/^\w/) {|s| s[0].to_s.upcase}.gsub(/_\w/) {|s| ' ' + s[1].to_s.upcase}
