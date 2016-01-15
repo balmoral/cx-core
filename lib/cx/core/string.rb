@@ -32,7 +32,7 @@ class String
     gsub /[[a-z],\d,\s,[:punct:]]/, ''
   end
 
-  # Returns camel case string
+  # Returns camel case string from a snake case.
   # e.g. 'john_smith' to 'JohnSmith'
   # if string is already camel case it should not change
   def camel_case
@@ -42,13 +42,17 @@ class String
   alias_method :camelize, :camel_case
 
 
-  # Takes a camel case string (like a class name)
-  # and inserts spaces before the caps, except for
+  # Takes a camel case or snake case string
+  # (like a class name or method name respectively)
+  # If the receiver is camel case then the result
+  # inserts spaces before the caps, except for
   # the first, or when caps a sequential.
+  # If the receiver is snake case then the result
+  # has spaces substituted for underscores.
   # e.g. 'AbcDefGhi' => 'Abc Def Ghi'
   # e.g. 'AbcABC' => 'Abc ABC'
-  def camel_case_to_words
-    gsub(/([A-Z]+)([A-Z][a-z])/, '\1 \2').gsub(/([a-z\d])([A-Z])/, '\1 \2').upcase
+  def to_words
+    gsub(/([A-Z]+)([A-Z][a-z])/, '\1 \2').gsub(/_/, ' ').gsub(/  /, / /)
   end
 
   # Returns string 'john_smith' as 'John Smith'
@@ -61,6 +65,13 @@ class String
   def snake_case
     gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2').gsub(/([a-z\d])([A-Z])/, '\1_\2').downcase
   end
+
+  # Takes a snake case string and substitutes
+  # spaces for underscores.
+  def camel_case
+    sub(/^[a-z]/){|a|a.upcase}.gsub(/[_\-][a-z]/) { |a| a[1].upcase }
+  end
+
 
   # Returns a string with commas added every 3 chars.
   def comma_numeric
