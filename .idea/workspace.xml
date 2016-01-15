@@ -37,8 +37,8 @@
       <file leaf-file-name="string.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/cx/core/string.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46055683">
-              <caret line="54" column="71" selection-start-line="54" selection-start-column="71" selection-end-line="54" selection-end-column="71" />
+            <state vertical-scroll-proportion="0.6264501">
+              <caret line="54" column="75" selection-start-line="54" selection-start-column="75" selection-end-line="54" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -836,8 +836,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/cx/core/string.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46055683">
-          <caret line="54" column="71" selection-start-line="54" selection-start-column="71" selection-end-line="54" selection-end-column="71" />
+        <state vertical-scroll-proportion="0.6264501">
+          <caret line="54" column="75" selection-start-line="54" selection-start-column="75" selection-end-line="54" selection-end-column="75" />
           <folding />
         </state>
       </provider>
