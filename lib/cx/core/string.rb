@@ -41,7 +41,6 @@ class String
 
   alias_method :camelize, :camel_case
 
-
   # Takes a camel case or snake case string
   # (like a class name or method name respectively)
   # If the receiver is camel case then the result
@@ -53,6 +52,12 @@ class String
   # e.g. 'AbcABC' => 'Abc ABC'
   def to_words
     gsub(/([a-z\d])([A-Z])/, '\1 \2').gsub(/_/, ' ').gsub(/ {2,}/, ' ')
+  end
+
+  # Returns string composed of the capitalized first characters
+  # of each word (from #to_words) in the string.
+  def to_acronym
+    to_words.split(' ').map {|w| w[0].upcase}.join
   end
 
   # Returns string 'john_smith' as 'John Smith'
