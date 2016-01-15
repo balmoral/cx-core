@@ -50,14 +50,14 @@ class String
   # has spaces substituted for underscores.
   # e.g. 'AbcDefGhi' => 'Abc Def Ghi'
   # e.g. 'AbcABC' => 'Abc ABC'
-  def to_words
+  def words
     gsub(/([a-z\d])([A-Z])/, '\1 \2').gsub(/_/, ' ').gsub(/ {2,}/, ' ')
   end
 
   # Returns string composed of the capitalized first characters
-  # of each word (from #to_words) in the string.
-  def to_acronym
-    to_words.split(' ').map {|w| w[0].upcase}.join
+  # of each word (from #words) in the string.
+  def acronym
+    words.split(' ').map {|w| w[0].upcase}.join
   end
 
   # Returns string 'john_smith' as 'John Smith'
