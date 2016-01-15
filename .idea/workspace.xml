@@ -38,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/lib/cx/core/string.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.46055683">
-              <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
+              <caret line="54" column="71" selection-start-line="54" selection-start-column="71" selection-end-line="54" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -837,7 +837,7 @@
     <entry file="file://$PROJECT_DIR$/lib/cx/core/string.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46055683">
-          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
+          <caret line="54" column="71" selection-start-line="54" selection-start-column="71" selection-end-line="54" selection-end-column="71" />
           <folding />
         </state>
       </provider>

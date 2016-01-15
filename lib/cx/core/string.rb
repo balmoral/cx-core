@@ -52,7 +52,7 @@ class String
   # e.g. 'AbcDefGhi' => 'Abc Def Ghi'
   # e.g. 'AbcABC' => 'Abc ABC'
   def to_words
-    gsub(/([A-Z]+)([A-Z][a-z])/, '\1 \2').gsub(/_/, ' ').gsub(/  /, / /)
+    gsub(/([A-Z]+)([A-Z][a-z])/, '\1 \2').gsub(/_/, ' ').gsub(/  /, ' ')
   end
 
   # Returns string 'john_smith' as 'John Smith'
