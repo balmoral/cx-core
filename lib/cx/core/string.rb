@@ -54,6 +54,10 @@ class String
     gsub(/([a-z\d])([A-Z])/, '\1 \2').gsub(/_/, ' ').single_space
   end
 
+  def words_capitalized
+    words.gsub(/\b(\w)/) {|w| w.upcase}
+  end
+
   # Returns a string composed of the capitalized first characters
   # of each word in self.words.
   def acronym
