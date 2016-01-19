@@ -36,7 +36,8 @@ class String
   # e.g. 'john_smith' to 'JohnSmith'
   # if string is already camel case it should not change
   def camel_case
-    sub(/^[a-z]/){|a|a.upcase}.gsub(/[_\-][a-z]/) { |a| a[1].upcase }
+    sub(/^[a-z]/){|a|a.upcase}
+    .gsub(/[_\-][a-z]/) {|a| a[1].upcase }
   end
 
   alias_method :camelize, :camel_case
@@ -51,7 +52,8 @@ class String
   # e.g. 'AbcDefGhi' => 'Abc Def Ghi'
   # e.g. 'AbcABC' => 'Abc ABC'
   def words
-    gsub(/([a-z\d])([A-Z])/, '\1 \2').gsub(/_/, ' ').single_space
+    gsub(/([a-z\d])([A-Z])/, '\1 \2')
+    .gsub(/_/, ' ').single_space
   end
 
   def words_capitalize
@@ -61,23 +63,36 @@ class String
   # Returns a string composed of the capitalized first characters
   # of each word in self.words.
   def acronym
-    words.split(' ').map {|w| w[0].upcase}.join
+    words
+    .split(' ')
+    .map {|w| w[0].upcase}
+    .join
   end
 
   # Returns string 'john_smith' as 'John Smith'
   def underscore_to_upcase
-    downcase.sub(/^\w/) {|s| s[0].to_s.upcase}.gsub(/_\w/) {|s| ' ' + s[1].to_s.upcase}
+    downcase
+    .sub(/^\w/) {|w| w[0].upcase}
+    .gsub(/_\w/) {|w| ' ' + w[1].upcase}
   end
 
   # Returns the snake_case (underscore) version of a CamelCase string.
   # If it is already underscore,it should return the same string.
   def snake_case
-    single_space.gsub(/ /, '_').gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2').gsub(/([a-z\d])([A-Z])/, '\1_\2').downcase
+    single_space
+    .gsub(/ /, '_')
+    .gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2')
+    .gsub(/([a-z\d])([A-Z])/, '\1_\2')
+    .single_underscore
+    .downcase
   end
 
   # Returns a CamelCase string from a spaced or underscored string.
   def camel_case
-    single_space.gsub(/ /, '_').sub(/^[a-z]/){|a|a.upcase}.gsub(/[_\-][a-z]/) { |a| a[1].upcase }
+    single_space
+    .gsub(/ /, '_')
+    .sub(/^[a-z]/) {|a| a.upcase}
+    .gsub(/[_\-][a-z]/) {|a| a[1].upcase }
   end
 
   # Returns string where all spaces between words are single only.
