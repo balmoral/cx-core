@@ -79,6 +79,7 @@ class String
   # Returns the snake_case (underscore) version of a CamelCase string.
   # If it is already underscore,it should return the same string.
   def snake_case
+    # normalize spaces to underscores before camel casing
     single_space
     .gsub(/ /, '_')
     .gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2')
@@ -87,11 +88,11 @@ class String
     .downcase
   end
 
-  # Returns a CamelCase string from a spaced or underscored string.
+  # Returns a CamelCase string from a spaced
+  # or snake_case (underscored) string.
   def camel_case
-    single_space
-    .gsub(/ /, '_')
-    .single_underscore
+    # normalize to snake case before camel casing
+    snake_case
     .sub(/^[a-z]/) {|a| a.upcase}
     .gsub(/[_\-][a-z]/) {|a| a[1].upcase }
   end
