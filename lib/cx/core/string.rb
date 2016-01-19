@@ -54,7 +54,7 @@ class String
     gsub(/([a-z\d])([A-Z])/, '\1 \2').gsub(/_/, ' ').single_space
   end
 
-  def words_capitalized
+  def words_capitalize
     words.gsub(/\b(\w)/) {|w| w.upcase}
   end
 
