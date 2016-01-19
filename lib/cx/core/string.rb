@@ -75,10 +75,9 @@ class String
     gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2').gsub(/([a-z\d])([A-Z])/, '\1_\2').downcase
   end
 
-  # Takes a snake case string and substitutes
-  # spaces for underscores.
+  # Returns a CamelCase string from a spaced or underscored string.
   def camel_case
-    sub(/^[a-z]/){|a|a.upcase}.gsub(/[_\-][a-z]/) { |a| a[1].upcase }
+    single_space.gsub(/ /, '_').sub(/^[a-z]/){|a|a.upcase}.gsub(/[_\-][a-z]/) { |a| a[1].upcase }
   end
 
   # Returns string where all spaces between words are single only.
