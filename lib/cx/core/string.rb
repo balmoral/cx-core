@@ -51,11 +51,11 @@ class String
   # e.g. 'AbcDefGhi' => 'Abc Def Ghi'
   # e.g. 'AbcABC' => 'Abc ABC'
   def words
-    gsub(/([a-z\d])([A-Z])/, '\1 \2').gsub(/_/, ' ').gsub(/ {2,}/, ' ')
+    gsub(/([a-z\d])([A-Z])/, '\1 \2').gsub(/_/, ' ').single_space
   end
 
-  # Returns string composed of the capitalized first characters
-  # of each word (from #words) in the string.
+  # Returns a string composed of the capitalized first characters
+  # of each word in self.words.
   def acronym
     words.split(' ').map {|w| w[0].upcase}.join
   end
@@ -77,6 +77,10 @@ class String
     sub(/^[a-z]/){|a|a.upcase}.gsub(/[_\-][a-z]/) { |a| a[1].upcase }
   end
 
+  # Returns string where all spaces between words are single only.
+  def single_space
+    gsub(/ {2,}/, ' ')
+  end
 
   # Returns a string with commas added every 3 chars.
   def comma_numeric
