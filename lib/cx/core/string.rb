@@ -69,10 +69,10 @@ class String
     downcase.sub(/^\w/) {|s| s[0].to_s.upcase}.gsub(/_\w/) {|s| ' ' + s[1].to_s.upcase}
   end
 
-  # Returns the snake case (underscore) version of a string.
-  # If it is already underscore, it should return the same string.
+  # Returns the snake_case (underscore) version of a CamelCase string.
+  # If it is already underscore,it should return the same string.
   def snake_case
-    gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2').gsub(/([a-z\d])([A-Z])/, '\1_\2').downcase
+    single_space.gsub(/ /, '_').gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2').gsub(/([a-z\d])([A-Z])/, '\1_\2').downcase
   end
 
   # Returns a CamelCase string from a spaced or underscored string.
@@ -81,8 +81,14 @@ class String
   end
 
   # Returns string where all spaces between words are single only.
+  # Leading & trailing spaces are stripped.
   def single_space
-    gsub(/ {2,}/, ' ')
+    gsub(/ {2,}/, ' ').strip
+  end
+
+  # Returns string where all underscores between words are single only.
+  def single_underscore
+    gsub(/_{2,}/, '_')
   end
 
   # Returns a string with commas added every 3 chars.
