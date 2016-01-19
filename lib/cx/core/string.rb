@@ -91,6 +91,7 @@ class String
   def camel_case
     single_space
     .gsub(/ /, '_')
+    .single_underscore
     .sub(/^[a-z]/) {|a| a.upcase}
     .gsub(/[_\-][a-z]/) {|a| a[1].upcase }
   end
