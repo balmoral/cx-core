@@ -9,8 +9,8 @@ class Object
   # Returns a symbol got from final section
   # (after the last ::) of the given class name.
   # If no :: found the full name is returned
-  def class_tag
-    self.class.tag
+  def class_moniker
+    self.class.moniker
   end
 end
 
