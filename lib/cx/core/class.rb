@@ -10,4 +10,8 @@ class Class
     end
     @tag
   end
+
+  def descendants
+    ObjectSpace.each_object(singleton_class).select { |klass| klass < self }
+  end
 end
