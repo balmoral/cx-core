@@ -1,5 +1,6 @@
 require 'cx/core/constants'
 require 'cx/core/array'
+require 'cx/core/module'
 require 'cx/core/class'
 require 'cx/core/comparable'
 require 'cx/core/date'
