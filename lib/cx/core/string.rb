@@ -1,15 +1,6 @@
 require 'cx/core/constants'
 
 class String
-  # Returns new string with comma separated values
-  # got from args and a newline appended.
-  # Args should be enumerable.
-  # If one or all of args is enumerable
-  # then recursively call csv for that arg.
-  def self.csv(args, sep = COMMA)
-    new.csv(args)
-  end
-
   # Returns self with newline character appended.
   def nl
     self << NL
@@ -41,6 +32,7 @@ class String
   end
 
   alias_method :camelize, :camel_case
+  alias_method :camelcase, :camel_case
 
   # Takes a camel case or snake case string
   # (like a class name or method name respectively)

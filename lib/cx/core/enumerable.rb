@@ -47,8 +47,8 @@ class Object
    #  }
    # end
 
-  def to_csv
-    map(&:to_s).join(',')
+  def to_csv(separator = ',')
+    map(&:to_s).join(separator)
   end
 
    def to_strs
