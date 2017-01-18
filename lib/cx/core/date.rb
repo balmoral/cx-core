@@ -4,6 +4,14 @@ require 'cx/core/time_format'
 class Date
   include TimeFormat
 
+  SUNDAY    = 0
+  MONDAY    = 1
+  TUESDAY   = 2
+  WEDNESDAY = 3
+  THURSDAY  = 4
+  FRIDAY    = 5
+  SATURDAY  = 6
+
   def mdy(century: true, sep: nil)
     to_time.mdy(century: century, sep: sep)
   end
@@ -29,11 +37,51 @@ class Date
   end
 
   def weekend?
-    (d = wday) == 0 || d == 6
+    (d = wday) == SUNDAY || d == SATURDAY
   end
 
   def day_of_week
     wday
+  end
+
+  alias_method :dow, :day_of_week
+
+  def next_week_day(wday)
+    delta = wday - self.wday
+    if delta < 0
+      delta = 7 + delta
+    elsif delta == 0
+      delta = 7
+    end
+    self + delta
+  end
+
+  def next_sunday
+    next_week_day(SUNDAY)
+  end
+
+  def next_monday
+    next_week_day(MONDAY)
+  end
+
+  def next_tuesday
+    next_week_day(TUESDAY)
+  end
+
+  def next_wednesday
+    next_week_day(WEDNESDAY)
+  end
+
+  def next_thursday
+    next_week_day(THURSDAY)
+  end
+
+  def next_friday
+    next_week_day(FRIDAY)
+  end
+
+  def next_saturday
+    next_week_day(SATURDAY)
   end
 
   def next_monday_if_weekend
