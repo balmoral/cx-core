@@ -118,7 +118,7 @@ class String
         fixed = first.reverse.gsub(/...(?=.)/) {|s| "#{s},"}.reverse
         "#{is_neg ? '-' : ''}#{fixed}#{last ? '.' : ''}#{last}"
       end
-    end
+    end.sub(' ,', '  ')
   end
 
   def strip_trailing_zeros
