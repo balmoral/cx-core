@@ -40,6 +40,10 @@ class Date
     (d = wday) == SUNDAY || d == SATURDAY
   end
 
+  def weekday?
+    !weekend?
+  end
+
   def day_of_week
     wday
   end
@@ -54,6 +58,14 @@ class Date
       delta = 7
     end
     self + delta
+  end
+
+  def tomorrow
+    self + 1
+  end
+
+  def yesterday
+    self - 1
   end
 
   def next_sunday
